@@ -1,35 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img
-    width="360"
-    height="120"
-    alt="UniSuper"
-    src="https://cdn-pays.bnpparibas.com/wp-content/blogs.dir/71/files/2015/04/UniSuper-Logo.png"
-  />
-</div>
-<div class="container">
-  <h2>Please use your email as username.</h2>
-  <mat-form-field class="field">
-    <input matInput placeholder="My email address" id="email" />
-  </mat-form-field>
-  <h2>Please enter your password.</h2>
-  <mat-form-field class="field">
-    <input matInput placeholder="My password" id="password" type="password" />
-  </mat-form-field>
-
-  <p>
-    <button mat-raised-button>Create my very own account</button>
-  </p>
-  <!-- <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field> -->
-
-  <!-- <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field> -->
+<div class="wrapper">
+  <header class="header">
+    <h1>Welcome to {{ title }}!</h1>
+    <img
+      width="360"
+      height="120"
+      alt="UniSuper"
+      src="https://cdn-pays.bnpparibas.com/wp-content/blogs.dir/71/files/2015/04/UniSuper-Logo.png"
+    />
+  </header>
+  <div class="main">
+    <h2>Please use your email as username.</h2>
+    <mat-form-field class="field">
+      <input matInput placeholder="My email address" id="email" />
+    </mat-form-field>
+    <h2>Please enter your password.</h2>
+    <mat-form-field class="field">
+      <input matInput placeholder="My password" id="password" type="password" />
+    </mat-form-field>
+    <div class="button">
+      <button mat-raised-button>Create my very own account</button>
+    </div>  
+  </div>  
 </div>
 
 <router-outlet></router-outlet>
