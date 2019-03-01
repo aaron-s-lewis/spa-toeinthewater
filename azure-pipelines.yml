@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+    ng config -g cli.warnings.versionMismatch false
     ng build --prod
   displayName: 'npm install and build'
 
@@ -28,11 +29,6 @@ steps:
       **\*.js
       package.json
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
-    includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
 
