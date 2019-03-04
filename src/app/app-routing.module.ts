@@ -5,8 +5,6 @@ import { GetStartedComponent } from 'src/containers/get-started/get-started.comp
 import { AppComponent } from './app.component';
 import { AvatarsComponent } from 'src/containers/avatars/avatars.component';
 import { Step1Component } from 'src/containers/step1/step1.component';
-import { Step2Component } from 'src/containers/step2/step2.component';
-import { Step3Component } from 'src/containers/step3/step3.component';
 
 const routes: Routes = [
   {
@@ -18,10 +16,7 @@ const routes: Routes = [
     {        path: 'get-started',        component:  GetStartedComponent      },
     {        path: 'registration',        component:  RegistrationComponent      },
     {        path: 'avatars',        component:  AvatarsComponent      },
-    {        path: 'step1',        component:  Step1Component      },
-    {        path: 'step2',        component:  Step2Component      },
-    {        path: 'step3',        component:  Step3Component      },
-
+    {        path: 'step1',        component:  Step1Component      }
 ];
 
 @NgModule({

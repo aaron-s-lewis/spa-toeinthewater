@@ -10,23 +10,25 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatStepperModule,
-  MatRippleModule
+  MatRippleModule,
+  MatRadioModule,
+  MatButtonToggleModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetStartedComponent } from 'src/containers/get-started/get-started.component';
 import { AppComponent } from './app.component';
 import { AvatarsComponent } from 'src/containers/avatars/avatars.component';
 import { Step1Component } from 'src/containers/step1/step1.component';
-import { Step2Component } from 'src/containers/step2/step2.component';
-import { Step3Component } from 'src/containers/step3/step3.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 @NgModule({
-  declarations: [RegistrationComponent, GetStartedComponent, AppComponent,AvatarsComponent,Step1Component,Step2Component,Step3Component],
+  declarations: [RegistrationComponent, GetStartedComponent, AppComponent,AvatarsComponent,Step1Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    MatRadioModule,
+    MatButtonToggleModule,
     MatSelectModule,
     MatFormFieldModule,
     MatInputModule,
