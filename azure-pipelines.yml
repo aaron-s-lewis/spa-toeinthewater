@@ -24,9 +24,9 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist/toe-in-the-water'
     archiveFile: '$(Build.ArtifactStagingDirectory)/toe-in-the-water.zip'
-    includeRootFolder: true
+    includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
   inputs:
