@@ -1,7 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { IAppState } from "./app.state";
-import { selectUserName } from "./store/selectors/user.selectors";
-import { Store, select } from "@ngrx/store";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",

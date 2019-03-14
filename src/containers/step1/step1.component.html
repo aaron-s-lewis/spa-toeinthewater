@@ -18,163 +18,220 @@
       </div>  
 </div> -->
 
-
 <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button> -->
 
-  <mat-vertical-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Lets Begin</ng-template>
-        <h2>Before we start, were would like to ask your 3 basic questions</h2>
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Lets Begin</ng-template>
+      <h2>Before we start, were would like to ask your 3 basic questions</h2>
 
-        <mat-form-field>
-          <input matInput placeholder="How shall we call you?" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Retirment Vision</ng-template>
-        <h2>How do you imagine your retirement to be?</h2>
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style"formControlName="secondCtrl" required>
-          <button mat-button matStepperNext> 
-            <mat-button-toggle class="square-button" value="Camping">
-              <img class="square-image"
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="How shall we call you?"
+          formControlName="firstCtrl"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Retirment Vision</ng-template>
+      <h2>How do you imagine your retirement to be?</h2>
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        formControlName="secondCtrl"
+        required
+      >
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="square-button" value="Camping">
+            <img
+              class="square-image"
               alt="Camping all the way"
-              src="assets/images/camping2.jpg"/>
-              <br/>
-              <span class="button-text">Camping all the way</span>
-            </mat-button-toggle>
-          </button>             
-          <button mat-button matStepperNext> 
-            <mat-button-toggle class="square-button" value="travel">
-              <img class="square-image"
-                alt="Camping all the way"
-                src="assets/images/travel.jpg"/>
-                <br/>
-                <span class="button-text">Traveling around the world</span>
-             </mat-button-toggle>
-          </button>             
-          <button mat-button matStepperNext>              
-            <mat-button-toggle class="square-button" value="sailing">
-              <img class="square-image"
-                alt="Sailing the Mediterranean"
-                src="assets/images/sailing.jpg"/>
-              <br/>
-              <span class="button-text">Sailing the Mediterranean</span>
-            </mat-button-toggle>
-          </button>             
-          <button mat-button matStepperNext>             
-            <mat-button-toggle class="square-button" value="grandkids">
-              <img class="square-image"
-                  alt="Looking after the grandkids"
-                  src="assets/images/grandkids.jpg"/>
-                <br/>
-              <span class="button-text">Looking after the grandkids</span>             
-            </mat-button-toggle>
-          </button>             
-          <button mat-button matStepperNext>             
-            <mat-button-toggle class="square-button" value="hobbies">
-              <img class="square-image"
-                alt="Finally having time for my hobbies"
-                src="assets/images/hobbies.jpg"/>
-                <br/>
-              <span class="button-text">Finally having time for my hobbies</span>             
-            </mat-button-toggle> 
-          </button>             
-        </mat-button-toggle-group>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-        <form [formGroup]="thirdFormGroup">
-            <ng-template matStepLabel>lifestyle</ng-template>
-            <h2>What is you lifestyle like</h2>
-            <mat-button-toggle-group name="fontStyle" aria-label="Font Style"formControlName="thirdCtrl" required>
-              <button mat-button matStepperNext> 
-                <mat-button-toggle class="rectangle-button" value="exercise">
-                  <img class="rectangle-image"
-                  alt="Camping all the way"
-                  src="assets/images/exercise.jpg"/>
-                  <br/>
-                  <span class="button-text">Fitness is my thing</span>
-                </mat-button-toggle>
-              </button>  		  
-            <button mat-button matStepperNext> 
-              <mat-button-toggle class="rectangle-button" value="kids">
-                <img class="rectangle-image"
-                  alt="Camping all the way"
-                  src="assets/images/kids.jpg"/>
-                  <br/>
-                  <span class="button-text">Spending time with my kids</span>
-               </mat-button-toggle>
-            </button>             
-            <button mat-button matStepperNext>              
-              <mat-button-toggle class="rectangle-button" value="adrenalin">
-                <img class="rectangle-image"
-                  alt="Sailing the Mediterranean"
-                  src="assets/images/adrenalin.jpg"/>
-                <br/>
-                <span class="button-text">Adenalin addict</span>
-              </mat-button-toggle>
-            </button>             
-            <button mat-button matStepperNext>             
-              <mat-button-toggle class="rectangle-button" value="party">
-                <img class="rectangle-image"
-                    alt="Looking after the grandkids"
-                    src="assets/images/party.jpg"/>
-                  <br/>
-                <span class="button-text">Party girl</span>             
-              </mat-button-toggle>
-            </button>             
-            <button mat-button matStepperNext>             
-              <mat-button-toggle class="rectangle-button" value="workaholic">
-                <img class="rectangle-image"
-                  alt="Finally having time for my hobbies"
-                  src="assets/images/workaholic.jpg"/>
-                  <br/>
-                <span class="button-text">Workaholic</span>             
-              </mat-button-toggle> 
-            </button>
-            <button mat-button matStepperNext>             
-                <mat-button-toggle class="rectangle-button" value="active">
-                  <img class="rectangle-image"
-                    alt="Finally having time for my hobbies"
-                    src="assets/images/active.jpg"/>
-                    <br/>
-                  <span class="button-text">Active</span>             
-                </mat-button-toggle> 
-              </button>                            
-			        </mat-button-toggle-group>
-        </form>
-    </mat-step>                
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-        Based on what you have told us we think that you maybe interested in our Growth investement option
-        <br/>
-        <div class="main">
-        <h3>Growth</h3>
-        <br/>
-        Suits members who want exposure to a range of asset classes and are comfortable with the value of their investments fluctuating.
-        Summart risk level high
-      </div>  
+              src="assets/images/camping21.jpg"
+            />
+            <br />
+            <span class="button-text">Camping all the way</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="square-button" value="travel">
+            <img
+              class="square-image"
+              alt="Camping all the way"
+              src="assets/images/travel.jpg"
+            />
+            <br />
+            <span class="button-text">Traveling around the world</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="square-button" value="sailing">
+            <img
+              class="square-image"
+              alt="Sailing the Mediterranean"
+              src="assets/images/sailing.jpg"
+            />
+            <br />
+            <span class="button-text">Sailing the Mediterranean</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="square-button" value="grandkids">
+            <img
+              class="square-image"
+              alt="Looking after the grandkids"
+              src="assets/images/grandkids.jpg"
+            />
+            <br />
+            <span class="button-text">Looking after the grandkids</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="square-button" value="hobbies">
+            <img
+              class="square-image"
+              alt="Finally having time for my hobbies"
+              src="assets/images/hobbies.jpg"
+            />
+            <br />
+            <span class="button-text">Finally having time for my hobbies</span>
+          </mat-button-toggle>
+        </button>
+      </mat-button-toggle-group>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>lifestyle</ng-template>
+      <h2>What is you lifestyle like</h2>
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        formControlName="thirdCtrl"
+        required
+      >
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="exercise">
+            <img
+              class="rectangle-image"
+              alt="Fitness is my thing"
+              src="assets/images/Exercise.jpg"
+            />
+            <br />
+            <span class="button-text">Fitness is my thing</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="kids">
+            <img
+              class="rectangle-image"
+              alt="Spending time with my kids"
+              src="assets/images/kids.jpg"
+            />
+            <br />
+            <span class="button-text">Spending time with my kids</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="adrenalin">
+            <img
+              class="rectangle-image"
+              alt="Adrenalin addict"
+              src="assets/images/adrenalin.jpg"
+            />
+            <br />
+            <span class="button-text">Adrenalin addict</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="workaholic">
+            <img
+              class="rectangle-image"
+              alt="Workaholic"
+              src="assets/images/workaholic.jpg"
+            />
+            <br />
+            <span class="button-text">Workaholic</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="party">
+            <img
+              class="rectangle-image"
+              alt="Alcoholics"
+              src="assets/images/party.jpg"
+            />
+            <br />
+            <span class="button-text">Alcoholic</span>
+          </mat-button-toggle>
+        </button>
+        <button mat-button matStepperNext>
+          <mat-button-toggle class="rectangle-button" value="active">
+            <img
+              class="rectangle-image"
+              alt="Active"
+              src="assets/images/active.jpg"
+            />
+            <br />
+            <span class="button-text">Active</span>
+          </mat-button-toggle>
+        </button>
+      </mat-button-toggle-group>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    Based on what you have told us we think that you maybe interested in our
+    Growth investement option
+    <br />
+    <div class="main">
+      <h3>Growth</h3>
+      <br />
+      Suits members who want exposure to a range of asset classes and are
+      comfortable with the value of their investments fluctuating. Summart risk
+      level high
+    </div>
 
+    <div class="main">
+      <h5>want to find out more about unisuper options?</h5>
+      <button
+        mat-raised-button
+        routerLink="/registration"
+        routerLinkActive="active"
+      >
+        Email me
+      </button>
+      <button
+        mat-raised-button
+        routerLink="/registration"
+        routerLinkActive="active"
+      >
+        Call me back
+      </button>
+    </div>
 
-      <div class="main">
-        <h5>want to find out more about unisuper options? </h5>
-        <button mat-raised-button routerLink="/registration" routerLinkActive="active">Email me</button>
-        <button mat-raised-button routerLink="/registration" routerLinkActive="active">Call me back</button>
-      </div>  
-
-       <h5>Jennifer it is easy to start with us - reguster within 30 seconds and configure the account later</h5>
-       <button mat-raised-button routerLink="/registration" routerLinkActive="active">Getting Started</button>
-       <br/>
-       <p> already a memsber? Login to my account.</p>
-    </mat-step>
-  </mat-vertical-stepper>
-
+    <h5>
+      Jennifer it is easy to start with us - reguster within 30 seconds and
+      configure the account later
+    </h5>
+    <button
+      mat-raised-button
+      routerLink="/registration"
+      routerLinkActive="active"
+    >
+      Getting Started
+    </button>
+    <br />
+    <p>already a memsber? Login to my account.</p>
+  </mat-step>
+</mat-vertical-stepper>

@@ -22,7 +22,6 @@ import { Step1Component } from "src/containers/step1/step1.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
-import { userReducers } from "./store/reducers/user.reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
@@ -48,7 +47,10 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
     FormsModule,
     ReactiveFormsModule,
     StoreDevtoolsModule,
-    StoreModule.forRoot({ user: userReducers })
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 // Retains last 25 states
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

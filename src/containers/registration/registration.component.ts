@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { IUserState } from "src/app/store/state/user.state";
 import { Store } from "@ngrx/store";
-import { SetUser, UserActions } from "src/app/store/actions/user.actions";
+import { SetUser } from "src/app/store/actions/user.actions";
 import {
   selectUserName,
   selectUserEmail
