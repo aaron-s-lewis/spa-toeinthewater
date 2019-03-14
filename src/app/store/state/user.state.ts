@@ -1,7 +1,7 @@
-import { IUser } from "../../user.model";
+import { UserModel } from "../../user.model";
 
 export interface IUserState {
-  user: IUser;
+  user: UserModel;
 }
 
 export const initialUserState: IUserState = {

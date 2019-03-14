@@ -1,23 +1,18 @@
 import { Action } from "@ngrx/store";
+import { UserModel } from "src/app/user.model";
 
 export enum EUserActions {
-  GetUser = "[User] Get User",
   SetUser = "[User] Set User"
 }
 
 export interface SetUserModuleValuePayload {
   name: string;
-  value?: string;
-}
-
-export class GetUser implements Action {
-  public readonly type = EUserActions.GetUser;
-  constructor(public payload?: any) {}
+  value: string;
 }
 
 export class SetUser implements Action {
   public readonly type = EUserActions.SetUser;
-  constructor(public payload: SetUserModuleValuePayload) {}
+  constructor(public payload: UserModel) {}
 }
 
-export type UserActions = GetUser | SetUser;
+export type UserActions = SetUser;

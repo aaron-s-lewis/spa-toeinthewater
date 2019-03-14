@@ -22,6 +22,8 @@ import { Step1Component } from "src/containers/step1/step1.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
+import { userReducers } from "./store/reducers/user.reducers";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { reducers } from "./store/reducers";
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(reducers)
+    StoreDevtoolsModule,
+    StoreModule.forRoot({ user: userReducers })
   ],
   providers: [],
   bootstrap: [AppComponent]

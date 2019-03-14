@@ -7,7 +7,7 @@ export const userReducers = (
 ): IUserState => {
   switch (action.type) {
     case EUserActions.SetUser: {
-      return { ...state, user: { name: action.payload.name } };
+      return { ...state, user: action.payload };
     }
   }
   return state;

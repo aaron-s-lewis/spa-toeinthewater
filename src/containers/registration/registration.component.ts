@@ -1,9 +1,12 @@
 import { Component } from "@angular/core";
 import { IUserState } from "src/app/store/state/user.state";
 import { Store } from "@ngrx/store";
-import { SetUser } from "src/app/store/actions/user.actions";
-import { selectUserName } from "src/app/store/selectors/user.selectors";
-import { IUser } from "src/app/user.model";
+import { SetUser, UserActions } from "src/app/store/actions/user.actions";
+import {
+  selectUserName,
+  selectUserEmail
+} from "src/app/store/selectors/user.selectors";
+import { UserModel } from "src/app/user.model";
 import { take } from "rxjs/operators";
 
 @Component({
@@ -13,20 +16,27 @@ import { take } from "rxjs/operators";
 })
 export class RegistrationComponent {
   title = "toe-in-the-water";
-  public constructor(private store: Store<IUserState>) {}
-  name: any;
+  public constructor(private store: Store<IUserState>) {
+    this.user = {
+      name: "TestName",
+      email: "TestEmail"
+    };
+  }
+  user: UserModel;
 
   public onClick() {
     console.log("Clicking");
-    this.store.dispatch(
-      new SetUser({
-        name: "name",
-        value: "TestName"
-      })
-    );
-    // this.store
-    //   .select(selectUserName)
-    //   .pipe(take(1))
-    //   .subscribe((value: any) => (this.name = value));
+
+    this.store.dispatch(new SetUser(this.user));
+
+    this.store
+      .select(selectUserName)
+      .pipe(take(1))
+      .subscribe((value: string) => console.log("Name: " + value));
+
+    this.store
+      .select(selectUserEmail)
+      .pipe(take(1))
+      .subscribe((value: string) => console.log("Email: " + value));
   }
 }

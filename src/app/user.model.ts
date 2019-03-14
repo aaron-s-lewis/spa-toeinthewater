@@ -1,3 +1,4 @@
-export interface IUser {
+export interface UserModel {
   name: string;
+  email: string;
 }

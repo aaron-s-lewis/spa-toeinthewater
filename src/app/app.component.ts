@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IAppState } from "./app.state";
 import { selectUserName } from "./store/selectors/user.selectors";
-import { GetUser } from "./store/actions/user.actions";
 import { Store, select } from "@ngrx/store";
 
 @Component({
