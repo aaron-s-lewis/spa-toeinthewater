@@ -24,6 +24,7 @@ import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { CallBackComponent } from "src/containers/call-back/call-back.component";
+import { EmailMeComponent } from "src/containers/email-me/email-me.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CallBackComponent } from "src/containers/call-back/call-back.component"
     AppComponent,
     AvatarsComponent,
     CallBackComponent,
-    Step1Component
+    Step1Component,
+    EmailMeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+    <div class="main">
+      <form [formGroup]="emailMeFormGroup">
+        <h3>Request a call back </h3>
+        <mat-form-field class="field">
+          <input
+          matInput
+          placeholder="My email address"
+          id="email"
+          formControlName="emailCtrl"
+        />
+        </mat-form-field>
+      </form>
+      <div class="button">
+        <button mat-raised-button (click)="onClick()">
+          Call me back
+        </button>
+      </div>
+    </div>
+  </div>
