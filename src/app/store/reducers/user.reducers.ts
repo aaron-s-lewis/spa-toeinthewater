@@ -1,13 +1,23 @@
-import { initialUserState, IUserState } from "../state/user.state";
 import { UserActions, EUserActions } from "../actions/user.actions";
+import { UserModel } from "src/app/user.model";
+
+export const initialState: UserModel = {
+  givenName: null,
+  surname: null,
+  retirementChoice: null,
+  lifestyleChoice: null,
+  mobile: null,
+  email: null,
+  password: null
+};
 
 export const userReducers = (
-  state = initialUserState,
+  state = initialState,
   action: UserActions
-): IUserState => {
+): UserModel => {
   switch (action.type) {
-    case EUserActions.SetUser: {
-      return { ...state, user: action.payload };
+    case EUserActions.SetUserModuleValue: {
+      return { ...state, [action.payload.name]: action.payload.value };
     }
   }
   return state;

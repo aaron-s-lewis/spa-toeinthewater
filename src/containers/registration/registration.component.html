@@ -10,14 +10,27 @@
     />
   </header>
   <div class="main">
-    <h2>Please use your email as username.</h2>
-    <mat-form-field class="field">
-      <input matInput placeholder="My email address" id="email" />
-    </mat-form-field>
-    <h2>Please enter your password.</h2>
-    <mat-form-field class="field">
-      <input matInput placeholder="My password" id="password" type="password" />
-    </mat-form-field>
+    <form [formGroup]="registrationFormGroup">
+      <h2>Please use your email as username.</h2>
+      <mat-form-field class="field">
+        <input
+          matInput
+          placeholder="My email address"
+          id="email"
+          formControlName="emailCtrl"
+        />
+      </mat-form-field>
+      <h2>Please enter your password.</h2>
+      <mat-form-field class="field">
+        <input
+          matInput
+          placeholder="My password"
+          id="password"
+          type="password"
+          formControlName="passwordCtrl"
+        />
+      </mat-form-field>
+    </form>
     <div class="button">
       <button mat-raised-button (click)="onClick()">
         Create my very own account

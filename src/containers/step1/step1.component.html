@@ -24,7 +24,7 @@
 
 <mat-vertical-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
+    <form (ngSubmit)="submit1()" [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Lets Begin</ng-template>
       <h2>Before we start, were would like to ask your 3 basic questions</h2>
 
@@ -43,7 +43,7 @@
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
+    <form (ngSubmit)="submit2()" [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Retirment Vision</ng-template>
       <h2>How do you imagine your retirement to be?</h2>
       <mat-button-toggle-group
@@ -53,7 +53,7 @@
         required
       >
         <button mat-button matStepperNext>
-          <mat-button-toggle class="square-button" value="Camping">
+          <mat-button-toggle class="square-button" value="camping">
             <img
               class="square-image"
               alt="Camping all the way"
@@ -111,7 +111,7 @@
     </form>
   </mat-step>
   <mat-step [stepControl]="thirdFormGroup">
-    <form [formGroup]="thirdFormGroup">
+    <form (ngSubmit)="submit3()" [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>lifestyle</ng-template>
       <h2>What is you lifestyle like</h2>
       <mat-button-toggle-group
