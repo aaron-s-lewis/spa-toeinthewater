@@ -23,6 +23,7 @@ export class Step1Component implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   private formBuilder: FormBuilder;
+  public givenName: string;
 
   constructor(private store: Store<IUserState>) {
     this.formBuilder = new FormBuilder();
@@ -57,6 +58,7 @@ export class Step1Component implements OnInit {
         value: this.nameFormControl.value
       })
     );
+    this.givenName = this.nameFormControl.value;
   }
 
   public submit2(): void {
