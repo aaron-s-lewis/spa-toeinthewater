@@ -1,27 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div class="wrapper">
-    <img
-    width="50"
-    height="50"
-    alt="UniSuper"
-    src="assets/"
-  />
-    <div class="main">
-        <h2>Before we start, were would like to ask your 3 basic questions</h2>
-        <mat-form-field class="field">
-          <input matInput placeholder="How shall we call you?" id="name" />
-        </mat-form-field>
-        
-        <div class="button">
-          <button mat-raised-button routerLink="/step2" routerLinkActive="active">Next</button>
-        </div>  
-      </div>  
-</div> -->
-
-<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button> -->
-
 <mat-vertical-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form (ngSubmit)="submit1()" [formGroup]="firstFormGroup">
@@ -206,14 +182,14 @@
       <h5>want to find out more about unisuper options?</h5>
       <button
         mat-raised-button
-        routerLink="/registration"
+        routerLink="/call-back"
         routerLinkActive="active"
       >
         Email me
       </button>
       <button
         mat-raised-button
-        routerLink="/registration"
+        routerLink="/call-back"
         routerLinkActive="active"
       >
         Call me back

@@ -12,7 +12,7 @@ import {
   MatStepperModule,
   MatRippleModule,
   MatRadioModule,
-  MatButtonToggleModule
+  MatButtonToggleModule,
 } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GetStartedComponent } from "src/containers/get-started/get-started.component";
@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { CallBackComponent } from "src/containers/call-back/call-back.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
     GetStartedComponent,
     AppComponent,
     AvatarsComponent,
+    CallBackComponent,
     Step1Component
   ],
   imports: [

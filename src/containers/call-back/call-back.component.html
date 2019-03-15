@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+  <div class="main">
+    <form [formGroup]="callBackFormGroup">
+      <h3>Request a call back </h3>
+      <mat-form-field class="field">
+        <input
+          matInput
+          placeholder="My Contact Number"
+          id="phone"
+          formControlName="phoneCtrl"
+          />
+      </mat-form-field>
+    </form>
+    <div class="button">
+      <button mat-raised-button (click)="onClick()">
+        Call me back
+      </button>
+    </div>
+  </div>
+
+</div>

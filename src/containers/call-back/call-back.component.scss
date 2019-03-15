@@ -1,0 +1,49 @@
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  justify-content: center;
+  max-width: 600px;
+}
+
+.button {
+  align-items: right;
+  text-align: right;
+  justify-content: right;
+}
+
+h1 {
+  color: #369;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 250%;
+}
+h3 {
+  color: #369;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 100%;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
