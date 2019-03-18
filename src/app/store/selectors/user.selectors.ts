@@ -1,14 +1,14 @@
-import { IUserState } from "../state/user.state";
 import { createSelector, createFeatureSelector } from "@ngrx/store";
+import { UserModel } from 'src/app/user.model';
 
-export const selectUser = createFeatureSelector<IUserState>("user");
+export const selectUser = createFeatureSelector<UserModel>("user");
 
 export const selectUserName = createSelector(
   selectUser,
-  (state: IUserState) => state.user.givenName
+  (state: UserModel) => state.givenName
 );
 
 export const selectUserEmail = createSelector(
   selectUser,
-  (state: IUserState) => state.user.email
+  (state: UserModel) => state.email
 );
