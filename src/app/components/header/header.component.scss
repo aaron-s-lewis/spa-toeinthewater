@@ -1,0 +1,17 @@
+h3 {
+  color: #369;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 100%;
+  max-width: 400px;
+}
+div{
+  display: flex;
+
+}
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  justify-content: space-between;
+}
+

@@ -1,18 +1,21 @@
-<main>
-
-  <img
+<div class="wrapper">
+<div class="logo" >
+<img
   width="180"
   height="53"
   alt="UniSuper"
   src="assets\images\unisuper-logo.svg"/>
+</div>
 
- <p *ngIf="( givenname$ | async) ; let myname">
-      {{myname}}
- </p>
 
-<img
-  style="float:right"
-  width="40"
-  height="60"
-  src="assets/images/jennifer.png"/>
-</main>
+ <div class="avatar" >
+    <h3 *ngIf="( givenname$ | async) ; let myname">
+        {{myname}}
+   </h3>
+
+   <img
+      width="40"
+      height="60"
+      src="assets/images/jennifer.png"/>
+  </div>
+</div>
