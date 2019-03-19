@@ -9,12 +9,20 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
+import { Observable } from 'rxjs';
+import { selectUserName } from 'src/app/store/selectors/user.selectors';
+
+export interface Option {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-call-back',
   templateUrl: './call-back.component.html',
   styleUrls: ['./call-back.component.scss']
 })
+
 export class CallBackComponent {
   title = 'Call me back';
 
@@ -24,8 +32,13 @@ export class CallBackComponent {
   private formBuilder: FormBuilder;
   phoneNumberControl: FormControl;
   callBackFormGroup: FormGroup;
+  givenName$ : Observable<string>;
 
   ngOnInit(): void {
+    
+    this.givenName$ = this.store.select(selectUserName);
+
+
     this.phoneNumberControl = new FormControl("", {
       validators: [Validators.required]
     });
@@ -33,7 +46,9 @@ export class CallBackComponent {
     this.callBackFormGroup = this.formBuilder.group({
       phoneCtrl: this.phoneNumberControl,
     });
+
   }
+ 
   public onClick() {
     console.log("Clicking");
     this.store.dispatch(
@@ -44,3 +59,11 @@ export class CallBackComponent {
     );
   }
 }
+export class SelectOverviewExample {
+  options: Option[] = [
+    {value: 'option-0', viewValue: 'Super help'},
+    {value: 'option-1', viewValue: 'General'},
+    {value: 'option-2', viewValue: 'Pension help'}
+  ];
+}
+

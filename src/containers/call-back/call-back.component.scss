@@ -2,6 +2,8 @@
 .wrapper {
   display: flex;
   flex-flow: row;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .wrapper > * {
@@ -10,15 +12,13 @@
 }
 
 .main {
-  justify-content: center;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .button {
   align-items: right;
   text-align: right;
-  justify-content: right;
-}
+  justify-content: right;}
 
 h1 {
   color: #369;
@@ -32,7 +32,6 @@ h3 {
 
 
 .column {
-  width: 400px;
   justify-content: space-around;
 }
 .greyBox{

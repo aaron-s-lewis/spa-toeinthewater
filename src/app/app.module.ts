@@ -6,7 +6,6 @@ import { RegistrationComponent } from "../containers/registration/registration.c
 
 import {
   MatButtonModule,
-  MatSelectModule,
   MatFormFieldModule,
   MatInputModule,
   MatStepperModule,
@@ -20,6 +19,7 @@ import { AppComponent } from "./app.component";
 import { AvatarsComponent } from "src/containers/avatars/avatars.component";
 import { Step1Component } from "src/containers/step1/step1.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {MatSelectModule} from '@angular/material/select';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
