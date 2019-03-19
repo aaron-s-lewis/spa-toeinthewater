@@ -1,9 +1,7 @@
 
 .wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  justify-content: center;
-  font-weight: bold;
+  display: flex;
+  flex-flow: row;
 }
 
 .wrapper > * {
@@ -28,22 +26,22 @@ h1 {
   font-size: 250%;
 }
 h3 {
-  color: #369;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 100%;
 }
 
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  width: 400px;
+  justify-content: space-around;
+}
+.greyBox{
+  background: #ccc;
+  width: 180px;
+
+}
+.blueBox{
+  color: #FFF;
+  background: #369;
+  width: 180px;
 }

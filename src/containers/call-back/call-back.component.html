@@ -2,8 +2,20 @@
 <app-header [requirePersonalise]="true"></app-header>
 <div class="wrapper">
   <div class="column">
+    <h3>Request a call back </h3>
+    <div class="blueBox">
+      <p>We can call you at:</p>
+      <h3>4:16 pm Friday</h3>
+    </div>
+    <a href ="www.google.com">Choose another time</a>
+    <div class="greyBox">
+        <p>Your current local time is:</p>
+        <h3>2:16 pm Friday</h3>
+    </div>
+  </div>
+
+  <div class="column">
     <form [formGroup]="callBackFormGroup">
-      <h3>Request a call back </h3>
       <mat-form-field class="field">
         <input
           matInput
