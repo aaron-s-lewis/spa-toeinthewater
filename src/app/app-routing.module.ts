@@ -13,7 +13,7 @@ import { EmailMeComponent } from 'src/containers/email-me/email-me.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'avatars',
+    redirectTo: 'get-started',
     pathMatch: 'full'
   },
     {        path: 'email-me',        component:  EmailMeComponent      },

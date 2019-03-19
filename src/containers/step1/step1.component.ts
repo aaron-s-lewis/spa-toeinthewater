@@ -14,6 +14,7 @@ import { SetUserModuleValue } from "src/app/store/actions/user.actions";
   templateUrl: "./step1.component.html",
   styleUrls: ["./step1.component.scss"]
 })
+
 export class Step1Component implements OnInit {
   isLinear = true;
   nameFormControl: FormControl;

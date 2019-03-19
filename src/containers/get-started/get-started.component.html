@@ -1,23 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-header [requirePersonalise]="false"></app-header>
 <div class="wrapper">
-  <header class="header">
-    <h1>{{ title }}</h1>
 
-  </header>
   <div class="main">
-    <h2>Please use your email as username.</h2>
-    <mat-form-field class="field">
-      <input matInput placeholder="My email address" id="email" />
-    </mat-form-field>
+    <h2>Great to see you here</h2>
+    <p>
+      Helping the country's best and brightest prepare for an exceptional retirement is what we hae been doing since October 2000
+    </p>
 
+    <div class="images">
+        <img
+          width="150"
+          height="150"
+          src="\assets\images\low-fees.svg" />
+
+        <img
+          width="150"
+          height="150"
+          src="\assets\images\exclusively-for-you.svg" />
+
+        <img
+          width="150"
+          height="150"
+          src="\assets\images\investments.svg" />
+    </div>
+
+    <div class="box">
+      <div class="elem">Low Fees</div>
+      <div class="elem">Non Profit</div>
+      <div class="elem">Investment Performance </div>
+    </div>
+
+    <p>
+      We are an open fund now you can now join this exclusive fund in a coupe of simple steps
+    </p>
     <div class="button">
-      <button mat-raised-button routerLink="/registration" routerLinkActive="active">Email me</button>
-    </div>  
-    <div class="button">
-      <button mat-raised-button routerLink="/registration" routerLinkActive="active">Call me back</button>
-    </div>  
-    <div class="button">
-      <button mat-raised-button routerLink="/registration" routerLinkActive="active">Getting Started</button>
-    </div>  
-  </div>  
+        <button mat-raised-button routerLink="/registration" routerLinkActive="active">Getting Started</button>
+        <button mat-raised-button routerLink="/avatars" routerLinkActive="active">Let us help your</button>
+    </div>
+
+  </div>
 </div>

@@ -1,11 +1,10 @@
-<app-header></app-header>
+<app-header [requirePersonalise]="true"></app-header>
 <div class="wrapper">
   <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form (ngSubmit)="submit1()" [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Lets Begin</ng-template>
         <h2>Before we start, were would like to ask your 3 basic questions</h2>
-
         <mat-form-field>
           <input
             matInput
@@ -22,7 +21,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form (ngSubmit)="submit2()" [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Retirment Vision</ng-template>
+        <ng-template matStepLabel>Retirement Vision</ng-template>
         <h2>How do you imagine your retirement to be?</h2>
         <mat-button-toggle-group
           class="toggle-group-style-overwrite"
@@ -107,7 +106,7 @@
               <img
                 class="rectangle-image"
                 alt="Fitness is my thing"
-                src="assets/images/Exercise.jpg"
+                src="assets/images/exercise.jpg"
               />
               <br />
               <span class="button-text">Fitness is my thing</span>
@@ -173,48 +172,67 @@
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
+      <h2>Thanks {{ givenName }}!</h2>
       Based on what you have told us we think that you maybe interested in our
-      Growth investement option
-      <br />
-      <div class="main">
+      <a href="https://www.unisuper.com.au/investments/investment-options-and-performance/super-performance-and-option-holdings/growth">Growth</a> investement option
+      <br/>
+
+      <div class="maingrey">
         <h3>Growth</h3>
-        <br />
-        Suits members who want exposure to a range of asset classes and are
-        comfortable with the value of their investments fluctuating. Summart
-        risk level high
+        <p>Suits members who want exposure to a range of asset classes and are comfortable with the value of their investments fluctuating.</p>
+        <p>Summary risk level:<b>High</b></p>
       </div>
-
-      <div class="main">
-        <h3>Want to find out more about unisuper options?</h3>
-        <button
-          mat-raised-button
-          routerLink="/email-me"
-          routerLinkActive="active"
-        >
-          Email me
-        </button>
-        <button
-          mat-raised-button
-          routerLink="/call-back"
-          routerLinkActive="active"
-        >
-          Call me back
-        </button>
+      <br/>
+      <div id="rcorners">
+        <h3 align="center" >Want to find out more about UniSuper options?</h3>
+        <br>
+        <br>
+        <div class="container">
+          <div class="box"><i class="material-icons md-48 blue1">alternate_email</i></div>
+          <div class="box"> <i class="material-icons md-48 blue1">phone</i></div>
+        </div>
+        <br>
+        <div class="container">
+          <div class="box">
+            <button
+              mat-raised-button
+              routerLink="/email-me"
+              routerLinkActive="active">
+              Email me
+            </button>
+          </div>
+          <div class="box">
+            <button
+              mat-raised-button
+              routerLink="/call-back"
+              routerLinkActive="active">
+              Call me back
+            </button>
+          </div>
+        </div>
+         <div class="container">
+          <div class="box2">
+            <p>We will not spam you! read our <a href="https://www.unisuper.com.au/about-us/privacy">privacy policy</a></p>
+          </div>
+          <div class="box2">
+            <p>One of our team members will call at a time that's convenient for you</p>
+          </div>
+        </div>
       </div>
-
-      <h3>
-        {{ givenName }}, it is easy to start with us - register within 30
-        seconds and configure the account later
+      <h3 align="center">
+        {{ givenName }}, it is easy to start with us - register within 30 seconds and configure the account later
       </h3>
-      <button
-        mat-raised-button
-        routerLink="/registration"
-        routerLinkActive="active"
-      >
-        Getting Started
-      </button>
-      <br />
-      <p>Already a member? Login to my account.</p>
+      <br>
+      <div class="container">
+        <button
+          mat-raised-button
+          routerLink="/registration"
+          routerLinkActive="active" >
+          Getting Started
+        </button>
+      </div>
+      <br>
+      <p align="center">Already a member? <a href="https://memberonline.unisuper.com.au/">Login to my account</a></p>
     </mat-step>
   </mat-vertical-stepper>
 </div>
