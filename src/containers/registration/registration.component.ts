@@ -9,6 +9,8 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
+import { Observable } from 'rxjs';
+import { selectUserName } from 'src/app/store/selectors/user.selectors';
 
 @Component({
   selector: "app-registration",
@@ -25,8 +27,11 @@ export class RegistrationComponent implements OnInit {
   emailFormControl: FormControl;
   passwordFormControl: FormControl;
   registrationFormGroup: FormGroup;
+  givenName$ : Observable<string>;
 
   ngOnInit(): void {
+    this.givenName$ = this.store.select(selectUserName);
+
     this.emailFormControl = new FormControl("", {
       validators: [Validators.required]
     });

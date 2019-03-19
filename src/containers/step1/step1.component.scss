@@ -93,7 +93,7 @@ h3 {
 }
 
 .material-icons.md-48 { font-size: 48px; }
-.material-icons.blue1 { color: #369; }
+.material-icons.blue1 { color: #80bfff; }
 .box {
   width: 300px;
 }
@@ -107,4 +107,24 @@ h3 {
   flex-flow: row wrap;
   justify-content: center;
   text-align: center;
+}
+
+#bluebutton {
+  color:#fff;
+  background : #369;
+  width: 250px;
+  font-weight: bold;
+}
+
+#bluebutton2 {
+  color:#fff;
+  background : #80bfff;
+  width: 250px;
+  font-weight: bold;
+}
+#bluebutton3 {
+  color:#fff;
+  background : #369;
+  width: 100px;
+  font-weight: bold;
 }

@@ -9,6 +9,8 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
+import { Observable } from 'rxjs';
+import { selectUserName } from 'src/app/store/selectors/user.selectors';
 
 @Component({
   selector: 'app-email-me',
@@ -24,8 +26,12 @@ export class EmailMeComponent {
   private formBuilder: FormBuilder;
   emailControl: FormControl;
   emailMeFormGroup: FormGroup;
+  givenName$: Observable<string>;
 
   ngOnInit(): void {
+
+    this.givenName$ = this.store.select(selectUserName);
+
     this.emailControl = new FormControl("", {
       validators: [Validators.required]
     });

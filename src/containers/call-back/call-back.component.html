@@ -15,49 +15,36 @@
   </div>
 
   <div class="column"  >
-    <br>
-    <br>
-    
-    
-    <form [formGroup]="callBackFormGroup">     
-        <mat-form-field class="field">
-            <input
-              matInput
-              placeholder="First name"
-              value = "{{givenName$ | async}}"
-              id="name"
-              />
-        </mat-form-field>
-       <mat-form-field class="field">
-        <input
-          matInput
-          placeholder="Contact Number"
-          id="phone"
-          />
+  <br>
+  <br>
+  <form [formGroup]="callBackFormGroup">
+    <mat-form-field class="field">
+      <input
+        matInput
+        placeholder="First name"
+        value = "{{givenName$ | async}}"
+        id="name"
+      />
+    </mat-form-field>
+    <mat-form-field class="field">
+      <input
+        matInput
+        placeholder="Contact Number"
+        id="phone"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>I would like Unisuper to</mat-label>
+        <select matNativeControl>
+          <option value="Super">Help with Super</option>
+          <option value="Pension">Help with Pension</option>
+          <option value="Advice">Provide Finical Advice</option>
+          <option value="General">Help Me</option>
+        </select>
       </mat-form-field>
-      <mat-form-field>
-          <mat-label>I would like Unisuper to</mat-label>
-          <select matNativeControl>
-            <option value="Super">Help with Super</option>
-            <option value="Pension">Help with Pension</option>
-            <option value="Advice">Provide Finical Advice</option>
-            <option value="General">Help Me</option>
-          </select>
-        </mat-form-field>
-      <!-- <mat-form-field>
-          <mat-label>I would like Unisuper to</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let option of options" [value]="option.value">
-              {{option.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>-->
-    </form> 
-    <div class="button">
-      <button mat-raised-button (click)="onClick()">
-        Call me back
+    </form>
+      <button id ="bluebutton" mat-raised-button (click)="onClick()">
+        Confirm
       </button>
-    </div>
   </div>
-
 </div>

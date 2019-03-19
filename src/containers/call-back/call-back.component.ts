@@ -12,11 +12,6 @@ import {
 import { Observable } from 'rxjs';
 import { selectUserName } from 'src/app/store/selectors/user.selectors';
 
-export interface Option {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-call-back',
   templateUrl: './call-back.component.html',
@@ -32,12 +27,11 @@ export class CallBackComponent {
   private formBuilder: FormBuilder;
   phoneNumberControl: FormControl;
   callBackFormGroup: FormGroup;
-  givenName$ : Observable<string>;
+  givenName$: Observable<string>;
 
   ngOnInit(): void {
-    
-    this.givenName$ = this.store.select(selectUserName);
 
+    this.givenName$ = this.store.select(selectUserName);
 
     this.phoneNumberControl = new FormControl("", {
       validators: [Validators.required]
@@ -48,7 +42,7 @@ export class CallBackComponent {
     });
 
   }
- 
+
   public onClick() {
     console.log("Clicking");
     this.store.dispatch(
@@ -59,11 +53,3 @@ export class CallBackComponent {
     );
   }
 }
-export class SelectOverviewExample {
-  options: Option[] = [
-    {value: 'option-0', viewValue: 'Super help'},
-    {value: 'option-1', viewValue: 'General'},
-    {value: 'option-2', viewValue: 'Pension help'}
-  ];
-}
-
