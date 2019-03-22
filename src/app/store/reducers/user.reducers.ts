@@ -6,9 +6,10 @@ export const initialState: UserModel = {
   surname: null,
   retirementChoice: null,
   lifestyleChoice: null,
-  mobile: null,
+  phone: null,
   email: null,
-  password: null
+  password: null,
+  helpChoice: null
 };
 
 export const userReducers = (
