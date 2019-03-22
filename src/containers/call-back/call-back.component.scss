@@ -1,0 +1,52 @@
+
+.wrapper {
+  display: flex;
+  flex-flow: row;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  max-width: 700px;
+}
+
+.button {
+  align-items: right;
+  text-align: right;
+  justify-content: right;}
+
+h1 {
+  color: #369;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 250%;
+}
+h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 100%;
+}
+
+
+.column {
+  justify-content: space-around;
+}
+.greyBox{
+  background: #ccc;
+  width: 180px;
+
+}
+.blueBox{
+  color: #FFF;
+  background: #369;
+  width: 180px;
+}
+#bluebutton {
+  color:#fff;
+  background : #369;
+  width: 250px;
+  font-weight: bold;
+}

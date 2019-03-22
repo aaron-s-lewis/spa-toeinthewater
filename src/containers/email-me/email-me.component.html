@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header [requirePersonalise]="true"></app-header>
+<div class="wrapper">
+  <div class="main">
+    <h2>Please email me</h2>
+    <form [formGroup]="emailMeFormGroup">
+      <div>
+        <mat-form-field class="field">
+          <input
+            matInput
+            placeholder="First name"
+            id="name"
+            formControlName="givenNameCtrl"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="field">
+          <input
+            matInput
+            placeholder="My email address"
+            id="email"
+            formControlName="emailCtrl"
+          />
+        </mat-form-field>
+      </div>
+    </form>
+    <button id="bluebutton" mat-raised-button (click)="onClick()">
+      Confirm
+    </button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="logo" >
+    <img
+      width="180"
+      height="53"
+      alt="UniSuper"
+      src="assets\images\unisuper-logo.svg"/>
+  </div>
+  <div class="personalise" *ngIf="(requirePersonalise)" >
+    <div cass="name">
+      <h3 *ngIf="( givenname$ | async) ; let myname">
+        {{myname}}
+      </h3>
+    </div>
+    <div  class="avatar" >
+      <img
+          width="40"
+          height="60"
+          src="assets/images/jennifer.png"/>
+    </div>
+  </div>
+</div>

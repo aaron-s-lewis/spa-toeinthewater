@@ -1,22 +1,23 @@
-
 .wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  justify-content: center;
-  font-weight: bold;
-  text-align: center;
+  width: 800px;
+  margin: 0 auto;
 }
 
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
+.toggle-group-style-overwrite {
+  overflow: auto;
+  display: block;
+  white-space: normal;
 }
 
 .main {
   text-align: left;
   max-width: 400px;
 }
-
+.maingrey {
+  padding: 10px;
+  text-align: left;
+  background:#EEE;
+}
 .button {
   align-items: right;
   text-align: right;
@@ -30,9 +31,15 @@ h1 {
 }
 h2 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 125%;
 }
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
 .example-radio-group {
   display: inline-flex;
   flex-direction: column;
@@ -47,7 +54,6 @@ h2 {
 }
 
 .button-text {
-
   bottom: 10%;
   width: 100%;
 }
@@ -56,7 +62,6 @@ h2 {
   width: 198px;
   height: 198px;
   position: relative;
-
 }
 .square-button {
   width: 250px;
@@ -69,11 +74,56 @@ h2 {
   width: 298px;
   height: 198px;
   position: relative;
-
 }
 .rectangle-button {
   width: 300px;
   height: 250px;
   float: left;
   position: relative;
+}
+
+#rcorners {
+  border-radius: 25px;
+  background: #ccc;
+  width: 600px;
+  height: 250px;
+  border: 2px solid #000000;
+  margin: 30px
+}
+
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.blue1 { color: #80bfff; }
+.box {
+  width: 300px;
+}
+
+.box2 {
+  width: 270px;
+  margin: 15px
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+#bluebutton {
+  color:#fff;
+  background : #369;
+  width: 250px;
+  font-weight: bold;
+}
+
+#bluebutton2 {
+  color:#fff;
+  background : #80bfff;
+  width: 250px;
+  font-weight: bold;
+}
+#bluebutton3 {
+  color:#fff;
+  background : #369;
+  width: 100px;
+  font-weight: bold;
 }

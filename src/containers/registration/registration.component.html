@@ -1,26 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-header [requirePersonalise]="false"></app-header>
+
 <div class="wrapper">
-  <header class="header">
-    <h1>Welcome to {{ title }}!</h1>
-    <img
-      width="360"
-      height="120"
-      alt="UniSuper"
-      src="https://cdn-pays.bnpparibas.com/wp-content/blogs.dir/71/files/2015/04/UniSuper-Logo.png"
-    />
-  </header>
   <div class="main">
+    <h2 align="left">Register with UniSuper</h2>
+    <p align="left">
+      Already a member?
+      <a href="https://memberonline.unisuper.com.au/">Login to my account</a>
+    </p>
     <form [formGroup]="registrationFormGroup">
-      <h2>Please use your email as username.</h2>
-      <mat-form-field class="field">
-        <input
-          matInput
-          placeholder="My email address"
-          id="email"
-          formControlName="emailCtrl"
-        />
-      </mat-form-field>
-      <h2>Please enter your password.</h2>
+      <div>
+        <mat-form-field class="field">
+          <input
+            matInput
+            placeholder="First name"
+            id="name"
+            formControlName="givenNameCtrl"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="field">
+          <input
+            matInput
+            placeholder="My email address"
+            id="email"
+            formControlName="emailCtrl"
+          />
+        </mat-form-field>
+      </div>
+
       <mat-form-field class="field">
         <input
           matInput
@@ -31,10 +40,30 @@
         />
       </mat-form-field>
     </form>
-    <div class="button">
-      <button mat-raised-button (click)="onClick()">
-        Create my very own account
+    <div>
+      <button id="bluebutton" mat-raised-button (click)="onClick()">
+        Get Started
       </button>
     </div>
+    <div>
+      <button id="button" mat-raised-button (click)="onClick2()">
+        <img
+          height="20px"
+          class="rectangle-image"
+          alt="Active"
+          src="assets/images/googleL.png"
+        />
+        Sign up with google
+      </button>
+    </div>
+    <br />
+    <p>
+      By registering with UniSupe, you agree to our
+      <a href="https://www.unisuper.com.au/terms-and-conditions"
+        >Terms of Service</a
+      >
+      and
+      <a href="https://www.unisuper.com.au/about-us/privacy">privacy policy</a>
+    </p>
   </div>
 </div>

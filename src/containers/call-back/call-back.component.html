@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header [requirePersonalise]="true"></app-header>
+<div class="wrapper">
+  <div class="column">
+    <h3>Request a call back </h3>
+    <div class="blueBox">
+      <p>We can call you at:</p>
+      <h3>4:16 pm Friday</h3>
+    </div>
+    <a href ="www.google.com">Choose another time</a>
+    <div class="greyBox">
+        <p>Your current local time is:</p>
+        <h3>2:16 pm Friday</h3>
+    </div>
+  </div>
+
+  <div class="column"  >
+  <br>
+  <br>
+  <form [formGroup]="callBackFormGroup">
+    <mat-form-field class="field">
+      <input
+        matInput
+        placeholder="First name"
+        value = "{{givenName$ | async}}"
+        id="name"
+      />
+    </mat-form-field>
+    <mat-form-field class="field">
+      <input
+        matInput
+        placeholder="Contact Number"
+        id="phone"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>I would like Unisuper to</mat-label>
+        <select matNativeControl>
+          <option value="Super">Help with Super</option>
+          <option value="Pension">Help with Pension</option>
+          <option value="Advice">Provide Finical Advice</option>
+          <option value="General">Help Me</option>
+        </select>
+      </mat-form-field>
+    </form>
+      <button id ="bluebutton" mat-raised-button (click)="onClick()">
+        Confirm
+      </button>
+  </div>
+</div>

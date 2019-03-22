@@ -1,10 +1,10 @@
 import { Action } from "@ngrx/store";
-import { UserModel } from "src/app/user.model";
+import { UserModel } from 'src/app/user.model';
 
 export enum EUserActions {
   SetUser = "[User] Set User",
   SetUserModuleValue = "[User] Set User Module Value",
-  SubmitApplication = "[User] Submit User Profile Creation",
+  SubmitApplication = "[User] Submit User Profile Creation"
 }
 
 export interface SetUserModuleValuePayload {
@@ -15,17 +15,18 @@ export interface SetUserModuleValuePayload {
 export class SetUserModuleValue implements Action {
   public readonly type = EUserActions.SetUserModuleValue;
 
-  constructor(public payload: SetUserModuleValuePayload) {}
+  constructor(public payload: SetUserModuleValuePayload) { }
 }
 
 export class SetUser implements Action {
   public readonly type = EUserActions.SetUser;
-  constructor(public payload: UserModel) {}
+  constructor(public payload: UserModel) { }
 }
 
 export class SubmitApplication implements Action {
   public readonly type = EUserActions.SubmitApplication;
-  constructor(public payload: UserModel) {}
+  constructor(public payload: UserModel) { }
 }
 
 export type UserActions = SetUserModuleValue | SubmitApplication;
+

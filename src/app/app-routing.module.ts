@@ -5,14 +5,19 @@ import { GetStartedComponent } from 'src/containers/get-started/get-started.comp
 import { AppComponent } from './app.component';
 import { AvatarsComponent } from 'src/containers/avatars/avatars.component';
 import { Step1Component } from 'src/containers/step1/step1.component';
+import { CallBackComponent } from 'src/containers/call-back/call-back.component';
+import { EmailMeComponent } from 'src/containers/email-me/email-me.component';
+
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'avatars',
+    redirectTo: 'get-started',
     pathMatch: 'full'
   },
-  // {  path: '',    component: AppComponent},
+    {        path: 'email-me',        component:  EmailMeComponent      },
+    {        path: 'call-back',        component:  CallBackComponent      },
     {        path: 'get-started',        component:  GetStartedComponent      },
     {        path: 'registration',        component:  RegistrationComponent      },
     {        path: 'avatars',        component:  AvatarsComponent      },

@@ -6,13 +6,12 @@ import { RegistrationComponent } from "../containers/registration/registration.c
 
 import {
   MatButtonModule,
-  MatSelectModule,
   MatFormFieldModule,
   MatInputModule,
   MatStepperModule,
   MatRippleModule,
   MatRadioModule,
-  MatButtonToggleModule
+  MatButtonToggleModule,
 } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GetStartedComponent } from "src/containers/get-started/get-started.component";
@@ -20,13 +19,18 @@ import { AppComponent } from "./app.component";
 import { AvatarsComponent } from "src/containers/avatars/avatars.component";
 import { Step1Component } from "src/containers/step1/step1.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatSelectModule } from '@angular/material/select';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { UserProfileService } from "./store/services.ts/user.services";
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './store/effects/user.effects';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { CallBackComponent } from "src/containers/call-back/call-back.component";
+import { EmailMeComponent } from "src/containers/email-me/email-me.component";
+import { HeaderComponent } from "./components/header/header.component";
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     GetStartedComponent,
     AppComponent,
     AvatarsComponent,
-    Step1Component
+    CallBackComponent,
+    Step1Component,
+    EmailMeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

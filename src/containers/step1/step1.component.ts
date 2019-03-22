@@ -14,6 +14,7 @@ import { SetUserModuleValue } from "src/app/store/actions/user.actions";
   templateUrl: "./step1.component.html",
   styleUrls: ["./step1.component.scss"]
 })
+
 export class Step1Component implements OnInit {
   isLinear = true;
   nameFormControl: FormControl;
@@ -23,6 +24,7 @@ export class Step1Component implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   private formBuilder: FormBuilder;
+  public givenName: string;
 
   constructor(private store: Store<IUserState>) {
     this.formBuilder = new FormBuilder();
@@ -57,6 +59,7 @@ export class Step1Component implements OnInit {
         value: this.nameFormControl.value
       })
     );
+    this.givenName = this.nameFormControl.value;
   }
 
   public submit2(): void {
