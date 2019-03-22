@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { IUserState } from "src/app/store/state/user.state";
 import { Store } from "@ngrx/store";
-import { SetUserModuleValue } from "src/app/store/actions/user.actions";
+import { SetUserModuleValue, SubmitApplication } from "src/app/store/actions/user.actions";
 import { take } from "rxjs/operators";
 
 import {
@@ -10,7 +10,8 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
-import { selectUserName } from "src/app/store/selectors/user.selectors";
+import { selectUserName, selectUser } from "src/app/store/selectors/user.selectors";
+import { UserModel } from 'src/app/user.model';
 
 @Component({
   selector: "app-call-back",
@@ -73,5 +74,9 @@ export class CallBackComponent {
         value: this.helpChoiceFormControl.value
       })
     );
+
+    this.store.select(selectUser).pipe(take(1)).subscribe((userData: UserModel) => {
+      this.store.dispatch(new SubmitApplication(userData));
+    });
   }
 }

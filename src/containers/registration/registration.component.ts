@@ -74,8 +74,8 @@ export class RegistrationComponent implements OnInit {
       })
     );
 
-    this.store.select(selectUser).pipe().subscribe((userData: UserModel) => {
-      console.log("userdata:", userData);
+    this.store.select(selectUser).pipe(take(1)).subscribe((userData: UserModel) => {
+      
       this.store.dispatch(new SubmitApplication(userData));
     });
 
