@@ -29,9 +29,10 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
 h2 {
   color: #369;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 125%;
 }
 
@@ -75,6 +76,7 @@ h3 {
   height: 198px;
   position: relative;
 }
+
 .rectangle-button {
   width: 300px;
   height: 250px;
@@ -101,6 +103,7 @@ h3 {
   width: 270px;
   margin: 15px
 }
+
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -121,12 +124,14 @@ h3 {
   width: 250px;
   font-weight: bold;
 }
+
 #bluebutton3 {
   color:#fff;
   background : #369;
   width: 100px;
   font-weight: bold;
 }
+
 #bluebutton4 {
   color:#fff;
   background : #369;

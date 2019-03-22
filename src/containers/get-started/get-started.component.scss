@@ -1,11 +1,9 @@
-
 .wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   font-weight: bold;
   text-align: center;
-
 }
 
 .wrapper > * {
@@ -30,9 +28,10 @@ h1 {
 }
 h2 {
   color: #369;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 125%;
 }
+
 .images {
   display: flex;
   flex-flow: row;
@@ -47,6 +46,7 @@ h2 {
   flex: 1 1 auto;
   width: 100px;
 }
+
 #bluebutton {
   color:#fff;
   background : #369;
