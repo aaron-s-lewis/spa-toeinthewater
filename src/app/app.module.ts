@@ -19,10 +19,14 @@ import { AppComponent } from "./app.component";
 import { AvatarsComponent } from "src/containers/avatars/avatars.component";
 import { Step1Component } from "src/containers/step1/step1.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { UserProfileService } from "./store/services.ts/user.services";
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './store/effects/user.effects';
+import { HttpClientModule } from '@angular/common/http';
 import { CallBackComponent } from "src/containers/call-back/call-back.component";
 import { EmailMeComponent } from "src/containers/email-me/email-me.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -59,9 +63,11 @@ import { HomeComponent } from 'src/containers/home/home.component';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25 // Retains last 25 states
-    })
+    }),
+    EffectsModule.forRoot([UserEffects]),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserProfileService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
