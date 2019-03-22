@@ -44,7 +44,11 @@
         </select>
       </mat-form-field>
     </form>
-    <button id="bluebutton" mat-raised-button (click)="onClick()">
+    <button
+      id="bluebutton"
+      mat-raised-button (click)="onClick()"
+      routerLink="/confirmed"
+      routerLinkActive="active">
       Confirm
     </button>
   </div>

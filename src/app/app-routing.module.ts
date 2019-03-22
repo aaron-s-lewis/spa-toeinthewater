@@ -8,6 +8,7 @@ import { Step1Component } from 'src/containers/step1/step1.component';
 import { CallBackComponent } from 'src/containers/call-back/call-back.component';
 import { EmailMeComponent } from 'src/containers/email-me/email-me.component';
 import { HomeComponent } from 'src/containers/home/home.component';
+import { ConfirmedComponent } from 'src/containers/confirmed/confirmed.component';
 
 
 
@@ -23,7 +24,9 @@ const routes: Routes = [
     {        path: 'registration',        component:  RegistrationComponent      },
     {        path: 'avatars',        component:  AvatarsComponent      },
     {        path: 'step1',        component:  Step1Component      },
-    {        path: 'home',        component:  HomeComponent      }
+    {        path: 'home',        component:  HomeComponent      },
+    {        path: 'confirmed',        component:  ConfirmedComponent      }
+
 ];
 
 @NgModule({
