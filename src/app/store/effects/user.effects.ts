@@ -3,14 +3,14 @@ import { Effect, Actions, ofType } from "@ngrx/effects";
 import { mergeMap, catchError } from "rxjs/operators";
 import { Observable, from } from "rxjs";
 
-import { EUserActions as actions } from "../actions/user.actions";
+import * as ModuleActions from "../actions/user.actions";
 import { UserProfileService } from "../services.ts/user.services";
 
 @Injectable()
 export class UserEffects {
     @Effect()
     public SubmitSignupApplication$: Observable<object> = this.actions$.pipe(
-        ofType(actions.SubmitApplication),
+        ofType(ModuleActions.SUBMIT_APPLICATION_FORM),
         mergeMap((action: any) =>
             this.service.submitApplication$(action.payload).pipe(
                 mergeMap((response: any) => {
@@ -23,6 +23,7 @@ export class UserEffects {
                     from([])
                 )
             )
+
         )
     );
     constructor(private actions$: Actions, private service: UserProfileService) { }

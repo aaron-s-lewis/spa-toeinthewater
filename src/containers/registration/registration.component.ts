@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { IUserState } from "src/app/store/state/user.state";
 import { Store } from "@ngrx/store";
-import { SetUserModuleValue } from "src/app/store/actions/user.actions";
-import { take } from "rxjs/operators";
+import { SetUserModuleValue, SubmitApplication } from "src/app/store/actions/user.actions";
+import { take, map } from "rxjs/operators";
 
 import {
   FormControl,
@@ -10,7 +10,8 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
-import { selectUserName } from "src/app/store/selectors/user.selectors";
+import { selectUserName, selectUser } from "src/app/store/selectors/user.selectors";
+import { UserModel } from 'src/app/user.model';
 
 @Component({
   selector: "app-registration",
@@ -72,14 +73,11 @@ export class RegistrationComponent implements OnInit {
         value: this.passwordFormControl.value
       })
     );
-    // this.store
-    //   .select(selectUserName)
-    //   .pipe(take(1))
-    //   .subscribe((value: string) => console.log("Name: " + value));
 
-    // this.store
-    //   .select(selectUserEmail)
-    //   .pipe(take(1))
-    //   .subscribe((value: string) => console.log("Email: " + value));
+    this.store.select(selectUser).pipe().subscribe((userData: UserModel) => {
+      console.log("userdata:", userData);
+      this.store.dispatch(new SubmitApplication(userData));
+    });
+
   }
 }

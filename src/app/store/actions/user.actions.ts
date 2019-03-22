@@ -4,8 +4,9 @@ import { UserModel } from 'src/app/user.model';
 export enum EUserActions {
   SetUser = "[User] Set User",
   SetUserModuleValue = "[User] Set User Module Value",
-  SubmitApplication = "[User] Submit User Profile Creation"
 }
+
+export const SUBMIT_APPLICATION_FORM = "[User] Submit registration Form";
 
 export interface SetUserModuleValuePayload {
   name: string;
@@ -24,7 +25,7 @@ export class SetUser implements Action {
 }
 
 export class SubmitApplication implements Action {
-  public readonly type = EUserActions.SubmitApplication;
+  public readonly type = SUBMIT_APPLICATION_FORM;
   constructor(public payload: UserModel) { }
 }
 
