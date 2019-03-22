@@ -10,7 +10,6 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms";
-import { Observable } from "rxjs";
 import { selectUserName } from "src/app/store/selectors/user.selectors";
 
 @Component({
@@ -22,22 +21,8 @@ export class RegistrationComponent implements OnInit {
   title = "toe-in-the-water";
   public constructor(private store: Store<IUserState>) {
     this.formBuilder = new FormBuilder();
-  }
 
-  private formBuilder: FormBuilder;
-  givenNameFormControl: FormControl;
-  emailFormControl: FormControl;
-  passwordFormControl: FormControl;
-  registrationFormGroup: FormGroup;
-  givenName: string;
-
-  ngOnInit(): void {
-    this.store
-      .select(selectUserName)
-      .pipe(take(1))
-      .subscribe(v => (this.givenName = v));
-
-    this.givenNameFormControl = new FormControl(this.givenName, {
+    this.givenNameFormControl = new FormControl("", {
       validators: [Validators.required]
     });
     this.emailFormControl = new FormControl("", {
@@ -52,6 +37,19 @@ export class RegistrationComponent implements OnInit {
       emailCtrl: this.emailFormControl,
       passwordCtrl: this.passwordFormControl
     });
+  }
+
+  private formBuilder: FormBuilder;
+  givenNameFormControl: FormControl;
+  emailFormControl: FormControl;
+  passwordFormControl: FormControl;
+  registrationFormGroup: FormGroup;
+
+  ngOnInit(): void {
+    this.store
+      .select(selectUserName)
+      .pipe(take(1))
+      .subscribe(v => this.givenNameFormControl.setValue(v));
   }
 
   public onClick() {
