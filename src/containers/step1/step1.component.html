@@ -185,11 +185,22 @@
         <p>Suits members who want exposure to a range of asset classes and are comfortable with the value of their investments fluctuating.</p>
         <p>Summary risk level:<b>High</b></p>
       </div>
+      <h3 align="center">
+        {{ givenName }}, it is easy to start with us - register within 30 seconds and configure the account later
+      </h3>
+      <br>
+      <div class="container">
+        <button
+          id="bluebutton"
+          mat-raised-button
+          routerLink="/registration"
+          routerLinkActive="active" >
+          Let's get started!
+        </button>
+      </div>
       <br/>
       <div id="rcorners">
-        <h3 align="center" >Want to find out more about UniSuper options?</h3>
-        <br>
-        <br>
+        <h3 align="center" >Need help?</h3>
         <div class="container">
           <div class="box"><i class="material-icons md-48 blue1">alternate_email</i></div>
           <div class="box"> <i class="material-icons md-48 blue1">phone</i></div>
@@ -224,19 +235,7 @@
           </div>
         </div>
       </div>
-      <h3 align="center">
-        {{ givenName }}, it is easy to start with us - register within 30 seconds and configure the account later
-      </h3>
-      <br>
-      <div class="container">
-        <button
-          id="bluebutton"
-          mat-raised-button
-          routerLink="/registration"
-          routerLinkActive="active" >
-          Getting Started
-        </button>
-      </div>
+      
       <br>
       <p align="center">Already a member? <a href="https://memberonline.unisuper.com.au/">Login to my account</a></p>
     </mat-step>
