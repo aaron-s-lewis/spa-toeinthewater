@@ -41,12 +41,19 @@
       </mat-form-field>
     </form>
     <div>
-      <button id="bluebutton" mat-raised-button (click)="onClick()">
+      <button 
+        id="bluebutton" 
+        mat-raised-button (click)="onClick()"
+        routerLink="/home"
+        routerLinkActive="active">>
         Get Started
       </button>
     </div>
     <div>
-      <button id="button" mat-raised-button (click)="onClick2()">
+      <button id="button" 
+        mat-raised-button (click)="onClick()"
+        routerLink="/home"
+        routerLinkActive="active">>        
         <img
           height="20px"
           class="rectangle-image"

@@ -82,13 +82,13 @@ h3 {
   position: relative;
 }
 
-#rcorners {
+.rcorners {
   border-radius: 25px;
   background: #ccc;
   width: 600px;
   height: 250px;
   border: 2px solid #000000;
-  margin: 30px
+  margin: 50px
 }
 
 .material-icons.md-48 { font-size: 48px; }
@@ -125,5 +125,12 @@ h3 {
   color:#fff;
   background : #369;
   width: 100px;
+  font-weight: bold;
+}
+#bluebutton4 {
+  color:#fff;
+  background : #369;
+  width: 250px;
+  height: 100px;
   font-weight: bold;
 }
