@@ -3,7 +3,8 @@ export interface UserModel {
   surname?: string;
   retirementChoice?: string;
   lifestyleChoice?: string;
-  mobile?: string;
+  phone?: string;
   email?: string;
   password?: string;
+  helpChoice?: string;
 }

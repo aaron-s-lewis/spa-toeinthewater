@@ -7,6 +7,7 @@ import { AvatarsComponent } from 'src/containers/avatars/avatars.component';
 import { Step1Component } from 'src/containers/step1/step1.component';
 import { CallBackComponent } from 'src/containers/call-back/call-back.component';
 import { EmailMeComponent } from 'src/containers/email-me/email-me.component';
+import { HomeComponent } from 'src/containers/home/home.component';
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
     {        path: 'get-started',        component:  GetStartedComponent      },
     {        path: 'registration',        component:  RegistrationComponent      },
     {        path: 'avatars',        component:  AvatarsComponent      },
-    {        path: 'step1',        component:  Step1Component      }
+    {        path: 'step1',        component:  Step1Component      },
+    {        path: 'home',        component:  HomeComponent      }
 ];
 
 @NgModule({

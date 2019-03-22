@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CallBackComponent } from "src/containers/call-back/call-back.component";
 import { EmailMeComponent } from "src/containers/email-me/email-me.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { HomeComponent } from 'src/containers/home/home.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { HeaderComponent } from "./components/header/header.component";
     Step1Component,
     EmailMeComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
