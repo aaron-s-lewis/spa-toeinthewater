@@ -23,6 +23,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./store/reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { UserProfileService } from "./store/services.ts/user.services";
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './store/effects/user.effects';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,9 +54,11 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25 // Retains last 25 states
-    })
+    }),
+    EffectsModule.forRoot([UserEffects]),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserProfileService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
